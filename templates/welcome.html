@@ -37,7 +37,7 @@ input.invalid {
 
   </style>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -67,7 +67,7 @@ input.invalid {
         			</div>
       			</div>
 		</div>
-		<hr></hr>
+		<hr>
 
 		<div class="container-fluid">
 		<div class="row  mvh-100 flex-column flex-md-row">
@@ -78,7 +78,7 @@ input.invalid {
 			<div class="row" id="addCity" style="{{addButton_style}}">
 				<button onclick="display_add_city_form()" style="margin-left:5px;margin-top:5px">Add City</button>
 			</div>
-			<hr></hr>
+			<hr>
           		<div class="row"> <!-- row2 -->
 			<div>
 			              <ul id="city_list">
@@ -108,7 +108,7 @@ input.invalid {
 		</div>
 
 		<div style="{{regForm_style}}" id="newRunFormDiv">
-		<form id="regForm" action="registercity" style="margin-top:-10px;" onsubmit="return validate()">
+		<form id="regForm" action="registercity" style="margin-top:-10px;">
 
 		<label>City Name</label>
 		<input class="input" type="text" placeholder="city name" name="city_name" id="city_name" required>
@@ -130,10 +130,15 @@ input.invalid {
 			<tr>
 				<td></td>
                 		<td>
-                  		<input type="checkbox" name="max_temp" id="max_temp" value="max_temp">Max Temperature</input><br></br>
-				<input type="checkbox" name="min_temp" id="min_temp" value="min_temp">Min Temperature</input><br></br>
-				<input type="checkbox" name="precipitation" id="precipitation" value="precipitation">Precipitation</input><br></br>
-                  		<input type="checkbox" name="snow" id="snow" value="snow">Snow</input>
+                  		<input type="checkbox" name="max_temp" id="max_temp" value="max_temp">
+						  <label for="max_temp">Max Temperature</label><br>
+				<input type="checkbox" name="min_temp" id="min_temp" value="min_temp">
+				<label for="min_temp">Min Temperature</label><br>
+
+				<input type="checkbox" name="precipitation" id="precipitation" value="precipitation">
+				<label for="precipitation">Precipitation</label><br>
+                  		<input type="checkbox" name="snow" id="snow" value="snow">
+						<label for="snow">Snow</label><br>
                 		</td>
               	     </tr>
 
@@ -147,7 +152,7 @@ input.invalid {
 		</div>
 
 
-  		<script src=../static/scripts/inputhandler.js></script>
+  		<script src="../static/scripts/inputhandler.js"></script>
 	</body>
 
 </html>

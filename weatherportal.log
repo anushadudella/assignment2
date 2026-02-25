@@ -1,0 +1,153 @@
+Portal started...
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5009
+ * Running on http://10.1.83.51:5009
+[33mPress CTRL+C to quit[0m
+Portal started...
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5009
+ * Running on http://10.1.83.51:5009
+[33mPress CTRL+C to quit[0m
+Portal started...
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5009
+ * Running on http://10.1.83.51:5009
+[33mPress CTRL+C to quit[0m
+Portal started...
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5009
+ * Running on http://10.1.83.51:5009
+[33mPress CTRL+C to quit[0m
+Portal started...
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5009
+ * Running on http://10.1.83.51:5009
+[33mPress CTRL+C to quit[0m
+Portal started...
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5009
+ * Running on http://10.1.83.51:5009
+[33mPress CTRL+C to quit[0m
+Portal started...
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5009
+ * Running on http://10.1.83.51:5009
+[33mPress CTRL+C to quit[0m
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8001
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [25/Feb/2026 02:27:32] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 02:27:32] "GET /static/images/longhorn.png HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 02:27:32] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [25/Feb/2026 02:46:28] "GET /admin HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 02:46:28] "[36mGET /static/images/longhorn.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [25/Feb/2026 02:47:09] "POST /adminlogin HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 02:47:09] "GET /static/scripts/inputhandler.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 02:47:09] "[36mGET /static/images/longhorn.png HTTP/1.1[0m" 304 -
+Inside addcity
+127.0.0.1 - - [25/Feb/2026 02:47:30] "GET /addcity?city_name=Austin HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 02:47:30] "[36mGET /static/images/longhorn.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [25/Feb/2026 02:47:30] "[36mGET /static/scripts/inputhandler.js HTTP/1.1[0m" 304 -
+Inside addcity
+127.0.0.1 - - [25/Feb/2026 02:47:50] "GET /addcity?city_name=Dallas HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 02:47:50] "[36mGET /static/scripts/inputhandler.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [25/Feb/2026 02:47:50] "[36mGET /static/images/longhorn.png HTTP/1.1[0m" 304 -
+Inside city_status
+City status:Austin
+Username:admin City:Austin
+{'name': 'Austin', 'month': '', 'year': '', 'params': []}
+127.0.0.1 - - [25/Feb/2026 02:47:58] "GET /status?city=Austin HTTP/1.1" 200 -
+Inside city_status
+City status:Dallas
+Username:admin City:Dallas
+{'name': 'Dallas', 'month': '', 'year': '', 'params': []}
+127.0.0.1 - - [25/Feb/2026 02:49:30] "GET /status?city=Dallas HTTP/1.1" 200 -
+Logout called.
+Before returning...
+127.0.0.1 - - [25/Feb/2026 02:49:33] "GET /logout HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 02:49:49] "GET /admin HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 02:49:49] "[36mGET /static/images/longhorn.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [25/Feb/2026 02:50:07] "POST /adminlogin HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 02:50:07] "[36mGET /static/images/longhorn.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [25/Feb/2026 02:50:07] "[36mGET /static/scripts/inputhandler.js HTTP/1.1[0m" 304 -
+Inside city_status
+City status:Austin
+Username:admin City:Austin
+{'name': 'Austin', 'month': '', 'year': '', 'params': []}
+127.0.0.1 - - [25/Feb/2026 02:50:13] "GET /status?city=Austin HTTP/1.1" 200 -
+Inside city_status
+City status:Dallas
+Username:admin City:Dallas
+{'name': 'Dallas', 'month': '', 'year': '', 'params': []}
+127.0.0.1 - - [25/Feb/2026 02:50:13] "GET /status?city=Dallas HTTP/1.1" 200 -
+Logout called.
+Before returning...
+127.0.0.1 - - [25/Feb/2026 02:50:14] "GET /logout HTTP/1.1" 200 -
+Username:devdatta
+Password:devdatta
+127.0.0.1 - - [25/Feb/2026 02:51:16] "POST /login HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 02:51:16] "[36mGET /static/scripts/inputhandler.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [25/Feb/2026 02:51:16] "[36mGET /static/images/longhorn.png HTTP/1.1[0m" 304 -
+Inside registercity
+['TMIN', 'PRCP']
+127.0.0.1 - - [25/Feb/2026 02:52:38] "GET /registercity?city_name=Austin&year=2023&month=05&min_temp=min_temp&precipitation=precipitation HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 02:52:38] "[36mGET /static/scripts/inputhandler.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [25/Feb/2026 02:52:38] "[36mGET /static/images/longhorn.png HTTP/1.1[0m" 304 -
+Inside city_status
+City status:Austin
+Username:devdatta City:Austin
+{'name': 'Austin', 'month': '05', 'year': '2023', 'params': ['TMIN', 'PRCP']}
+127.0.0.1 - - [25/Feb/2026 02:52:40] "GET /status?city=Austin HTTP/1.1" 200 -
+Inside registercity
+['TMAX', 'PRCP']
+127.0.0.1 - - [25/Feb/2026 02:52:59] "GET /registercity?city_name=Dallas&year=2024&month=05&max_temp=max_temp&precipitation=precipitation HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 02:52:59] "[36mGET /static/scripts/inputhandler.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [25/Feb/2026 02:52:59] "[36mGET /static/images/longhorn.png HTTP/1.1[0m" 304 -
+Inside city_status
+City status:Dallas
+Username:devdatta City:Dallas
+{'name': 'Dallas', 'month': '05', 'year': '2024', 'params': ['TMAX', 'PRCP']}
+127.0.0.1 - - [25/Feb/2026 02:53:00] "GET /status?city=Dallas HTTP/1.1" 200 -
+Inside registercity
+['TMAX']
+127.0.0.1 - - [25/Feb/2026 02:53:22] "GET /registercity?city_name=Houston&year=2023&month=08&max_temp=max_temp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 02:53:22] "[36mGET /static/scripts/inputhandler.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [25/Feb/2026 02:53:22] "[36mGET /static/images/longhorn.png HTTP/1.1[0m" 304 -
+Inside city_status
+City status:Austin
+Username:devdatta City:Austin
+{'name': 'Austin', 'month': '05', 'year': '2023', 'params': ['TMIN', 'PRCP']}
+127.0.0.1 - - [25/Feb/2026 02:53:35] "GET /status?city=Austin HTTP/1.1" 200 -
+Inside city_status
+City status:Dallas
+Username:devdatta City:Dallas
+{'name': 'Dallas', 'month': '05', 'year': '2024', 'params': ['TMAX', 'PRCP']}
+127.0.0.1 - - [25/Feb/2026 02:53:37] "GET /status?city=Dallas HTTP/1.1" 200 -
+Logout called.
+Before returning...
+127.0.0.1 - - [25/Feb/2026 02:53:44] "GET /logout HTTP/1.1" 200 -
+Username:devdatta
+Password:devdatta
+127.0.0.1 - - [25/Feb/2026 02:53:51] "POST /login HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 02:53:51] "[36mGET /static/images/longhorn.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [25/Feb/2026 02:53:51] "[36mGET /static/scripts/inputhandler.js HTTP/1.1[0m" 304 -
+Inside city_status
+City status:Austin
+Username:devdatta City:Austin
+{'name': 'Austin', 'month': '05', 'year': '2023', 'params': ['TMIN', 'PRCP']}
+127.0.0.1 - - [25/Feb/2026 02:53:55] "GET /status?city=Austin HTTP/1.1" 200 -
+Inside city_status
+City status:Dallas
+Username:devdatta City:Dallas
+{'name': 'Dallas', 'month': '05', 'year': '2024', 'params': ['TMAX', 'PRCP']}
+127.0.0.1 - - [25/Feb/2026 02:53:58] "GET /status?city=Dallas HTTP/1.1" 200 -
+Logout called.
+Before returning...
+127.0.0.1 - - [25/Feb/2026 02:54:03] "GET /logout HTTP/1.1" 200 -

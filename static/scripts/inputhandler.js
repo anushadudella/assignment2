@@ -26,6 +26,43 @@ function get_city_status(city) {
 	 	fieldTable.appendChild(nameRow);
 	 }
          // Assignment2 TODO:
+
+         // Month
+         if('month' in fieldData) {
+            monthRow = document.createElement("tr");
+            monthTD = document.createElement("td");
+            monthTD.innerHTML = "month";
+            monthValTD = document.createElement("td");
+            monthValTD.innerHTML = fieldData['month'];
+            monthRow.appendChild(monthTD);
+            monthRow.appendChild(monthValTD);
+            fieldTable.appendChild(monthRow);
+         }
+
+         // Year
+         if('year' in fieldData) {
+            yearRow = document.createElement("tr");
+            yearTD = document.createElement("td");
+            yearTD.innerHTML = "year";
+            yearValTD = document.createElement("td");
+            yearValTD.innerHTML = fieldData['year'];
+            yearRow.appendChild(yearTD);
+            yearRow.appendChild(yearValTD);
+            fieldTable.appendChild(yearRow);
+         }
+
+         // Params
+         if('params' in fieldData) {
+            paramsRow = document.createElement("tr");
+            paramsTD = document.createElement("td");
+            paramsTD.innerHTML = "params";
+            paramsValTD = document.createElement("td");
+            paramsValTD.innerHTML = fieldData['params'];
+            paramsRow.appendChild(paramsTD);
+            paramsRow.appendChild(paramsValTD);
+            fieldTable.appendChild(paramsRow);
+         }
+
 	 // Add rows for month, year, params
          outputImg.appendChild(fieldTable);
 
@@ -81,5 +118,5 @@ function display_add_city_form() {
 	statusDiv = document.getElementById("status");
 	statusDiv.setAttribute("style", "display:none;");
 
-	document.getElementById("newRunForm").setAttribute("style","display:none;");
+	document.getElementById("newRunFormDiv").setAttribute("style","display:none;");
 }

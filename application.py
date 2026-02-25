@@ -93,6 +93,9 @@ def city_status():
 
     op['name'] = city_details.name
     # Assignment2 TODO: Add month, year, params to op
+    op['month'] = city_details.month
+    op['year'] = city_details.year
+    op['params'] = city_details.params
     app.logger.info(op)
     return json.dumps(op)
 
@@ -111,7 +114,7 @@ def addcity():
     user_cities = in_mem_cities
     return render_template('welcome.html',
             welcome_message = "Personal Weather Portal - Admin Panel",
-            status_string="Assignment2 TODO: status message 3",
+            status_string=f"Added city {city_name}",
             cities=user_cities,
             name=username,
             addButton_style="display:inline;",
@@ -134,6 +137,8 @@ def registercity():
     # Assignment2 TODO:
     # Parse year and month
     #app.logger.info("City:" + city_name + " Year:" + year + " Month:" + month)
+    year = request.args.get('year')
+    month = request.args.get('month')
  
     user_weather_params = [] 
     if 'max_temp' in request.args:
@@ -141,6 +146,12 @@ def registercity():
 
     # Assignment2 TODO:
     # Parse and save min_temp, precipitation, snow
+    if 'min_temp' in request.args:
+        user_weather_params.append('TMIN')
+    if 'precipitation' in request.args:
+        user_weather_params.append('PRCP')
+    if 'snow' in request.args:
+        user_weather_params.append('SNOW')
 
     app.logger.info(user_weather_params)
 
@@ -152,7 +163,8 @@ def registercity():
         if c.name == city_name:
             city_details = CityDetails(name=city_name,year=year, month=month, params=user_weather_params)
             my_cities.append(city_details)
-    in_mem_user_cities[username] = my_cities
+            in_mem_user_cities[username] = my_cities
+            break
 
     present = False
     for c in in_mem_cities:
@@ -164,20 +176,22 @@ def registercity():
                 welcome_message = "Personal Weather Portal",
                 cities=my_cities,
                 name=username,
-                status_string="Assignment2 TODO: status message 1 ",
+                status_string=f"Registered city {city_name}, yay!!",
                 addButton_style="display:none;",
                 addCityForm_style="display:none;",                
                 regForm_style="display:none;",
+                regButton_style="display:inline;",
                 status_style="display:block;")
     else:
         return render_template('welcome.html',
                 cities=my_cities,
                 welcome_message = "Personal Weather Portal",
                 name=username,
-                status_string="Assignment2 TODO: status message 2 ",
+                status_string=f"Weather data for city {city_name} is not available :(",
                 addButton_style="display:none;",
                 addCityForm_style="display:none;",
                 regForm_style="display:none;",
+                regButton_style="display:inline;",
                 status_style="display:block;")
 
 
@@ -220,12 +234,29 @@ def index():
 # Assignment2 TODO: Add route for "/adminlogin"
 # This should be the action of the admin form submission
 # Use the login() method for reference
+@app.route("/admin")
+def admin():
+    # Gets admin page for admin workflow
+    return render_template("adminindex.html")
 
 
 # Assignment2 TODO: Add route and method for "/admin" path
 # This should respond with adminindex.html
 # Use the index() method for reference.
-
+@app.route("/adminlogin", methods=['POST'])
+def adminlogin():
+    username = request.form['username'].strip()
+    session['username'] = username
+    return render_template('welcome.html',
+                welcome_message = "Personal Weather Portal - Admin Panel",
+                cities = in_mem_cities,
+                name=username,
+                addButton_style="display:inline;",
+                addCityForm_style="display:none;",
+                regButton_style="display:none;",
+                regForm_style="display:none;",
+                status_style="display:none;")
+ 
 
 if __name__ == "__main__":
 
