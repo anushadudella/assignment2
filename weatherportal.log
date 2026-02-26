@@ -504,3 +504,98 @@ City status:Dallas
 Username:anusha City:Dallas
 {'name': 'Dallas', 'month': '11', 'year': '2023', 'params': ['TMIN']}
 127.0.0.1 - - [25/Feb/2026 20:10:41] "GET /status?city=Dallas HTTP/1.1" 200 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8001
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [25/Feb/2026 20:18:09] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 20:18:09] "[36mGET /static/images/longhorn.png HTTP/1.1[0m" 304 -
+Username:admin
+Password:admin
+127.0.0.1 - - [25/Feb/2026 20:18:13] "POST /login HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 20:18:13] "[36mGET /static/images/longhorn.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [25/Feb/2026 20:18:13] "[36mGET /static/scripts/inputhandler.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [25/Feb/2026 20:18:23] "GET /admin HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 20:18:24] "[36mGET /static/images/longhorn.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [25/Feb/2026 20:18:26] "POST /adminlogin HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 20:18:26] "[36mGET /static/images/longhorn.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [25/Feb/2026 20:18:26] "[36mGET /static/scripts/inputhandler.js HTTP/1.1[0m" 304 -
+Inside addcity
+127.0.0.1 - - [25/Feb/2026 20:18:30] "GET /addcity?city_name=Austin HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 20:18:30] "[36mGET /static/images/longhorn.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [25/Feb/2026 20:18:30] "[36mGET /static/scripts/inputhandler.js HTTP/1.1[0m" 304 -
+Inside city_status
+City status:Austin
+Username:admin City:Austin
+{'name': 'Austin', 'month': '', 'year': '', 'params': []}
+127.0.0.1 - - [25/Feb/2026 20:18:31] "GET /status?city=Austin HTTP/1.1" 200 -
+Logout called.
+Before returning...
+127.0.0.1 - - [25/Feb/2026 20:18:35] "GET /logout HTTP/1.1" 200 -
+Username:anusha
+Password:anusha
+127.0.0.1 - - [25/Feb/2026 20:18:40] "POST /login HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 20:18:40] "[36mGET /static/images/longhorn.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [25/Feb/2026 20:18:40] "[36mGET /static/scripts/inputhandler.js HTTP/1.1[0m" 304 -
+Inside registercity
+['TMIN', 'PRCP', 'SNOW']
+127.0.0.1 - - [25/Feb/2026 20:18:47] "GET /registercity?city_name=Austin&year=2006&month=11&min_temp=min_temp&precipitation=precipitation&snow=snow HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 20:18:47] "[36mGET /static/scripts/inputhandler.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [25/Feb/2026 20:18:47] "[36mGET /static/images/longhorn.png HTTP/1.1[0m" 304 -
+Inside city_status
+City status:Austin
+Username:anusha City:Austin
+{'name': 'Austin', 'month': '11', 'year': '2006', 'params': ['TMIN', 'PRCP', 'SNOW']}
+127.0.0.1 - - [25/Feb/2026 20:18:48] "GET /status?city=Austin HTTP/1.1" 200 -
+Logout called.
+Before returning...
+127.0.0.1 - - [25/Feb/2026 20:18:53] "GET /logout HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 20:18:55] "GET /admin HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 20:18:55] "[36mGET /static/images/longhorn.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [25/Feb/2026 20:18:57] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 20:18:57] "[36mGET /static/images/longhorn.png HTTP/1.1[0m" 304 -
+Username:anusha
+Password:anusha
+127.0.0.1 - - [25/Feb/2026 20:19:00] "POST /login HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 20:19:00] "[36mGET /static/images/longhorn.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [25/Feb/2026 20:19:00] "[36mGET /static/scripts/inputhandler.js HTTP/1.1[0m" 304 -
+Inside registercity
+['TMAX']
+127.0.0.1 - - [25/Feb/2026 20:19:13] "GET /registercity?city_name=Dallas&year=2022&month=11&max_temp=max_temp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 20:19:13] "[36mGET /static/scripts/inputhandler.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [25/Feb/2026 20:19:13] "[36mGET /static/images/longhorn.png HTTP/1.1[0m" 304 -
+Logout called.
+Before returning...
+127.0.0.1 - - [25/Feb/2026 20:19:16] "GET /logout HTTP/1.1" 200 -
+Username:sat
+Password:sat
+127.0.0.1 - - [25/Feb/2026 20:19:20] "POST /login HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 20:19:20] "[36mGET /static/images/longhorn.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [25/Feb/2026 20:19:20] "[36mGET /static/scripts/inputhandler.js HTTP/1.1[0m" 304 -
+Inside registercity
+['TMIN']
+127.0.0.1 - - [25/Feb/2026 20:19:30] "GET /registercity?city_name=Austin&year=2022&month=11&min_temp=min_temp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 20:19:30] "[36mGET /static/images/longhorn.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [25/Feb/2026 20:19:30] "[36mGET /static/scripts/inputhandler.js HTTP/1.1[0m" 304 -
+Logout called.
+Before returning...
+127.0.0.1 - - [25/Feb/2026 20:19:32] "GET /logout HTTP/1.1" 200 -
+Username:anusha
+Password:anusha
+127.0.0.1 - - [25/Feb/2026 20:19:35] "POST /login HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 20:19:35] "[36mGET /static/images/longhorn.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [25/Feb/2026 20:19:35] "[36mGET /static/scripts/inputhandler.js HTTP/1.1[0m" 304 -
+Inside city_status
+City status:Austin
+Username:anusha City:Austin
+{'name': 'Austin', 'month': '11', 'year': '2006', 'params': ['TMIN', 'PRCP', 'SNOW']}
+127.0.0.1 - - [25/Feb/2026 20:19:38] "GET /status?city=Austin HTTP/1.1" 200 -
+Logout called.
+Before returning...
+127.0.0.1 - - [25/Feb/2026 20:19:42] "GET /logout HTTP/1.1" 200 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8001
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [25/Feb/2026 21:45:44] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 21:45:44] "[36mGET /static/images/longhorn.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [25/Feb/2026 21:45:50] "GET /admin HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 21:45:50] "[36mGET /static/images/longhorn.png HTTP/1.1[0m" 304 -
