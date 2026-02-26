@@ -114,7 +114,7 @@ def addcity():
     user_cities = in_mem_cities
     return render_template('welcome.html',
             welcome_message = "Personal Weather Portal - Admin Panel",
-            status_string=f"Added city {city_name}",
+            status_string=f"Registered city {city_name}",
             cities=user_cities,
             name=username,
             addButton_style="display:inline;",
