@@ -155,7 +155,6 @@ def registercity():
 
     app.logger.info(user_weather_params)
 
-
     my_cities = []
     if username in in_mem_user_cities:
         my_cities = in_mem_user_cities[username]
@@ -184,7 +183,7 @@ def registercity():
                 status_style="display:block;")
     else:
         return render_template('welcome.html',
-                cities=my_cities,
+                cities=in_mem_user_cities.get(username, []),
                 welcome_message = "Personal Weather Portal",
                 name=username,
                 status_string=f"Weather data for city {city_name} is not available :(",
